@@ -29,8 +29,13 @@ public class ReadExcel : Singleton<ReadExcel>
     private Dictionary<string, List<ConfigData[]>> dataDict; //存放所有数据表内的数据，key：类名  value：数据
     public void LoadAllExcelData()
     {
+#if UNITY_EDITOR || UNITY_STANDALONE
+        string INPUT_PATH = URLSetting.STREAMINGASSETS_URL + ExcelPath;
+#elif UNITY_ANDROID
         string INPUT_PATH = Application.persistentDataPath + "/" + ExcelPath;
-
+#elif UNITY_IPHONE || UNITY_IOS
+        string INPUT_PATH = URLSetting.STREAMINGASSETS_URL + ExcelPath;
+#endif
         if (string.IsNullOrEmpty(INPUT_PATH))
         {
             throw new Exception("请先设置数据表路径！");

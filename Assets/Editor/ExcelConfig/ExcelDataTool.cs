@@ -6,10 +6,8 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
-using System.Collections;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEditor;
 using Excel;
@@ -109,6 +107,13 @@ public class ExcelDataTool
         UnityEditor.AssetDatabase.Refresh();
         Debug.Log("<color=yellow>导表成功!</color>");
     }
+
+    [UnityEditor.MenuItem("开发工具/重新读取Excel")]
+    public static void ReLoadExcelData()
+    {
+        ReadExcel.Instance.LoadAllExcelData();
+    }
+
     private static void OnLogCallBack(string condition)
     {
         FileIndex.Append(condition);
