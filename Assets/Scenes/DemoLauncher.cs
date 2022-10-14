@@ -36,7 +36,7 @@ public class DemoLauncher : MonoBehaviour
     //     else
     //     {
     //         string ss = www.text;
-    //         paths = ss.Split("\n", StringSplitOptions.RemoveEmptyEntries);
+    //         paths = ss.Split('\n', (char)StringSplitOptions.RemoveEmptyEntries);
     //     }
     //
     //     for (int i = 0; i < paths.Length; i++)

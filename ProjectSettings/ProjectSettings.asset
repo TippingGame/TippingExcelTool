@@ -157,6 +157,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.TippingGame.TippingExcelTool
     Standalone: com.TippingGame.TippingExcelTool
+    iPhone: com.TippingGame.TippingExcelTool
   buildNumber:
     Standalone: 0
     iPhone: 0

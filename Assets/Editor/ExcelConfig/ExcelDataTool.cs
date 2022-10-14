@@ -66,7 +66,7 @@ public class ExcelDataTool
 
         float step = 1f;
         FileIndex.Clear();
-        FileTools.SafeDeleteFile(URLSetting.STREAMINGASSETS_URL + "config/fileindex.txt");
+        FileTools.SafeDeleteFile(URLSetting.CS_STREAMINGASSETS_URL + "config/fileindex.txt");
         foreach (string item in files)
         {
             ProgressBar.UpdataBar("正在加载 " + item, step / files.Length * 0.4f);
@@ -118,12 +118,12 @@ public class ExcelDataTool
     {
         FileIndex.Append(condition);
         if (FileIndex.Length <= 0) return;
-        if (!File.Exists(URLSetting.STREAMINGASSETS_URL + "config/fileindex.txt"))
+        if (!File.Exists(URLSetting.CS_STREAMINGASSETS_URL + "config/fileindex.txt"))
         {
-            var fs = File.Create(URLSetting.STREAMINGASSETS_URL + "config/fileindex.txt");
+            var fs = File.Create(URLSetting.CS_STREAMINGASSETS_URL + "config/fileindex.txt");
             fs.Close();
         }
-        using (var sw = File.AppendText(URLSetting.STREAMINGASSETS_URL + "config/fileindex.txt"))
+        using (var sw = File.AppendText(URLSetting.CS_STREAMINGASSETS_URL + "config/fileindex.txt"))
         {
             sw.WriteLine(FileIndex.ToString());
         }

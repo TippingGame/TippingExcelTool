@@ -30,11 +30,11 @@ public class ReadExcel : Singleton<ReadExcel>
     public void LoadAllExcelData()
     {
 #if UNITY_EDITOR || UNITY_STANDALONE
-        string INPUT_PATH = URLSetting.STREAMINGASSETS_URL + ExcelPath;
+        string INPUT_PATH = URLSetting.CS_STREAMINGASSETS_URL + ExcelPath;
 #elif UNITY_ANDROID
         string INPUT_PATH = Application.persistentDataPath + "/" + ExcelPath;
 #elif UNITY_IPHONE || UNITY_IOS
-        string INPUT_PATH = URLSetting.STREAMINGASSETS_URL + ExcelPath;
+        string INPUT_PATH = URLSetting.CS_STREAMINGASSETS_URL + ExcelPath;
 #endif
         if (string.IsNullOrEmpty(INPUT_PATH))
         {
@@ -92,7 +92,7 @@ public class ReadExcel : Singleton<ReadExcel>
         FileStream stream = null;
         try
         {
-            stream = File.Open(inputPath, FileMode.Open, FileAccess.ReadWrite);
+            stream = File.Open(inputPath, FileMode.Open, FileAccess.Read);
         }
         catch
         {
