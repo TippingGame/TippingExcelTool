@@ -1,4 +1,4 @@
-# TippingExcelTool
+# F8ExcelTool
 
 [![license](http://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Unity Version](https://img.shields.io/badge/unity-2021.3.8f1-blue)](https://unity.com)
@@ -8,8 +8,8 @@
 Unity读取Excel工具，自动生成C#索引字段，能读取二进制文件和Excel文件，游戏运行时修改excel数据，支持Win/Android/iOS/Mac/Linux
 
 ## 使用流程
-导入文件,打开SampleScene场景，点击菜单栏->开发工具->导入配置表  
-游戏运行时修改excel数据，点击菜单栏->开发工具->运行时读取Excel  
+导入文件,打开SampleScene场景，点击菜单栏->开发工具->导入配置表_F8  
+游戏运行时修改excel数据，点击菜单栏->开发工具->运行时读取Excel_F7  
 
 ### 读取二进制文件
 ```C#
